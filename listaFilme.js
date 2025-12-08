@@ -16,6 +16,12 @@ let lista = {
         title: "A Guerra Jurassica",
         descri: "Esse é um stop motion sobre um dinossauro que invadiu uma cidade.",
         video: "7WJy9RhbTak"
+      },
+      id4: {
+        foto: "https://img.youtube.com/vi/TjBTFjEOLMI/maxresdefault.jpg",
+        title: "Matei o pou",
+        descri: "Terror",
+        video: "TjBTFjEOLMI"
       }
     };
     
