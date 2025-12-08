@@ -21,7 +21,7 @@ let lista = {
         title: "O Estranho da Terra",
         img: "https://img.youtube.com/vi/l-yQNK46qUI/maxresdefault.jpg",
         descri: "Esse é uma serie sobre um alien que teve o planeta destruido e foi para terra",
-        url: "series.html?id=id4"
+        url: "series.html?id=id1"
     }, 
     id5: {
         title: "Matei o Pou",
