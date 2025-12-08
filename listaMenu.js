@@ -27,7 +27,7 @@ let lista = {
         title: "Matei o Pou",
         img: "https://img.youtube.com/vi/TjBTFjEOLMI/maxresdefault.jpg",
         descri: "Esse filme é um video de terror feito por Luiz Miguel¿¿",
-        url: "filme.html?id=id5"
+        url: "filme.html?id=id4"
     }
 }
 
