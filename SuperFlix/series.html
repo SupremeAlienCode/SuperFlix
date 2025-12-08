@@ -1,0 +1,66 @@
+<html>
+  <title>SuperFlix - Serie</title>
+  <link rel="stylesheet" href="styles.css">
+<body>
+  <div class="menu">
+    <div style="width: 100%; height: 450px; background-color: black; border-radius: 10px;">
+      <a href="index.html"><h1 style="color: white; margin-left: 98%;">X</h1></a>
+      <h2 style="color: white; font-size: 40px; margin-left: 50px;" id="titulo">Titulo</h2>
+      <img style="width: 400px; height: 200px; border: 2px solid white; margin: auto; border-radius: 10px; margin-bottom: 50px;" src="logo.png" id="foto">
+      <h3 style="color: white; margin-left: 500px; height: 500px; width: 350px; margin-top: -200px;" id="descri">Descrição</h3>
+    </div>
+    
+    <div style="width: 100%; background-color: black; border-radius: 10px; margin-top: 50px;" id="episodios">
+      <!-- Template escondido -->
+<a id="template" class="episodio" style="display:none; text-decoration: none; color: white;     " href="#">
+  <img class="ep-image" src="logo.png" width="200" height="100" style="border-radius:5px; border:1px solid white; margin-bottom:20px;">
+  <h3 class="ep-numero">Ep X</h3>
+  <h2 class="ep-nome">Nome</h2>
+  <h3 class="ep-descri">Descrição</h3>
+</a>      </div>
+    </div>
+  </div>
+  
+  <script>
+    let lista = {
+      id1: {
+        img: "https://img.youtube.com/vi/l-yQNK46qUI/maxresdefault.jpg",
+        quantidadeEp: 3,
+        titulo: "O Estranho da Terra",
+        descri: "Esse é um curta sobre um alien que teve o planeta destruido e foi para terra",
+        episodios: [
+          {nome: "Sozinho e Perdido", descri: "Um alien tem o planeta destruido", videoid: "l-yQNK46qUI"},
+          {nome: "Caindo na Floresta", descri: "O alien vai para a terra", videoid: "CLSnD2dwgT0"}
+        ]
+      }
+    };
+  
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const item = lista[id];
+
+    if (item) {
+      document.getElementById("foto").src = item.img;
+      document.getElementById("descri").textContent = item.descri;
+      document.getElementById("titulo").textContent = item.titulo;
+
+      const container = document.getElementById("episodios");
+      const template = document.getElementById("template");
+
+item.episodios.forEach((ep, index) => {
+  const clone = template.cloneNode(true);
+  clone.style.display = "block"; // mostrar o clone
+
+  clone.href = "video player.html?id=" + id + "&videoid=" + ep.videoid + "&filme=false";
+  clone.querySelector(".ep-numero").textContent = "Ep " + (index + 1);
+  clone.querySelector(".ep-nome").textContent = ep.nome;
+  clone.querySelector(".ep-descri").textContent = ep.descri;
+  clone.querySelector(".ep-image").src = "https://img.youtube.com/vi/" + ep.videoid + "/maxresdefault.jpg";
+  container.appendChild(clone);
+});
+    } else {
+      alert("ID não encontrado!");
+    }
+  </script>
+</body>
+</html> 
