@@ -1,0 +1,188 @@
+body {
+background-color: #210202;
+    transition: 0.5s;
+}
+
+.top-bar {
+    background-color: red;
+    min-width: 100%;
+    max-width: 101%;
+    height: 70px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 5px black;
+    position: fixed;
+}
+
+.logo {
+    border-radius: 10px;
+    margin-left: 7px;
+}
+
+
+.home {
+    margin-left: 50px;
+    margin: 0 10;
+    width: 100px;
+    height: 50px;
+    background-color: red;   
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 24px; 
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.home:hover {
+    font-size: 25px;
+}
+
+.scroll {
+    margin-top: 10%;
+    padding-left: 10px;
+    background-color: black;
+    min-width: 100%;
+    max-width: 101%;
+    height: 250px;
+    border-radius: 10px;
+    align-content: center;
+    align-items: center;
+    display: flex;             
+    overflow-x: auto;           
+    gap: 10px;                  
+    padding: 10px;
+    scroll-behavior: smooth;
+    transition: 0.3s;
+}
+
+.filme {
+    background-color: #210202;
+    width: 300px;
+    height: 200px;
+    margin: 0 10;
+    align-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.filme:hover {
+    height: 202;
+    width: 302;
+}
+
+.container-filme {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.filme-miniatura {
+    height: 50%;
+    width: 40%;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.assistir {
+    background-color: red;   
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 16px; 
+    border-radius: 8px;
+    height: 50px;
+    width: 36%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.menu {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.descricao {
+    display: none;
+}
+
+@font-face {
+  font-family: 'MinhaFonte';
+  src: url('Moonstrike-nRqzP.otf') format('opentype');
+}
+
+body {
+  font-family: 'MinhaFonte', sans-serif;
+}
+
+#loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      z-index: 9999; / fica por cima de tudo /
+    }
+
+
+    .spinner {
+      border: 6px solid #444;
+      border-top: 6px solid red;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+      margin-right: 15px;
+      
+        
+}
+    
+
+.new {
+    margin-left: 50px;
+    margin: 0 10;
+    width: 100px;
+    height: 50px;
+    background-color: red;   
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    font-size: 24px; 
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.new:hover {
+    font-size: 25px;
+}
+
+.episodio {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}

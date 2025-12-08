@@ -1,0 +1,60 @@
+<html>
+
+<title>SuperFlix - Filme</title>
+<link rel="stylesheet" href="styles.css">
+<body>
+  
+  <div class="container-filme">
+    <a href="index.html"><h1 style="color: white; margin-left: 98%;">X</h1></a>
+    <h1 style="color: white; margin-left: 15px;" id="titulo">Titulo</h1>
+    <img id="image" class="filme-miniatura" src="img/logo.png">
+    <a id="assistir" class="assistir" href="video player.html"><h2>Assistir</h2></a>
+    <h2 id="descri" style="color: white; margin-left: 50%; height: 50%; width: 40%; margin-top: -200px;">Descrição</h2>
+    <script>
+    let lista = {
+      id1: {
+        foto: "https://img.youtube.com/vi/pAHwqloAb8w/maxresdefault.jpg",
+        title: "Caos e Mais Caos",
+        descri: "Esse é um curta de minecraft sobre um negociante que ganhou poderes e explodiu tudo.",
+        video: "pAHwqloAb8w"
+      },
+      id2: {
+        foto: "https://img.youtube.com/vi/fD9R7DNUEMA/maxresdefault.jpg",
+        title: "Dimensao da Caverna",
+        descri: "Esse é um curta de minecraft sobre um negociante que foi parar em uma dimensão com cavernas.",
+        video: "fD9R7DNUEMA"
+      },
+      id3: {
+        foto: "https://img.youtube.com/vi/7WJy9RhbTak/maxresdefault.jpg",
+        title: "A Guerra Jurassica",
+        descri: "Esse é um stop motion sobre um dinossauro que invadiu uma cidade.",
+        video: "7WJy9RhbTak"
+      }
+    };
+    
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    
+    const titulo = document.getElementById("titulo");
+    const img = document.getElementById("image")
+    const assistir = document.getElementById("assistir")
+    
+    const item = lista[id];
+
+    if (item) {
+
+    const textDescri = document.getElementById("descri")
+    textDescri.textContent = item.descri
+    titulo.textContent = item.title
+    img.src = item.foto
+    assistir.href = "video player.html?videoid=" + item.video + "&id=" + id + "&filme=true";
+    } else {
+      window.location.href = "Error400.html";
+    }
+    
+    </script>
+  </div>
+  
+  
+</body>
+</html>
