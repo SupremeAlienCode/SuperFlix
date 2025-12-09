@@ -20,20 +20,8 @@
 </a>      </div>
     </div>
   </div>
-  
+<script src="https://cdn.jsdelivr.net/gh/SupremeAlienCode/SuperFlix/listaSeries.js"></script>
   <script>
-    let lista = {
-      id1: {
-        img: "https://img.youtube.com/vi/l-yQNK46qUI/maxresdefault.jpg",
-        quantidadeEp: 3,
-        titulo: "O Estranho da Terra",
-        descri: "Esse é um curta sobre um alien que teve o planeta destruido e foi para terra",
-        episodios: [
-          {nome: "Sozinho e Perdido", descri: "Um alien tem o planeta destruido", videoid: "l-yQNK46qUI"},
-          {nome: "Caindo na Floresta", descri: "O alien vai para a terra", videoid: "CLSnD2dwgT0"}
-        ]
-      }
-    };
   
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -59,7 +47,7 @@ item.episodios.forEach((ep, index) => {
   container.appendChild(clone);
 });
     } else {
-      alert("ID não encontrado!");
+      window.location.href = "Error400.html";
     }
   </script>
 </body>
